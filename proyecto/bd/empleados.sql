@@ -1,0 +1,283 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 27-12-2017 a las 19:29:49
+-- Versión del servidor: 5.5.24-log
+-- Versión de PHP: 5.4.3
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de datos: `empleados`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `1_2018historico`
+--
+
+CREATE TABLE IF NOT EXISTS `1_2018historico` (
+  `RUT` int(11) DEFAULT NULL,
+  `NOMBRE` varchar(30) DEFAULT NULL,
+  `DEPARTAMENTO` varchar(30) DEFAULT NULL,
+  `FECHA` varchar(30) DEFAULT NULL,
+  `SueldoBase` int(11) DEFAULT NULL,
+  `NUM_HORAS_EXTRAS` int(11) DEFAULT NULL,
+  `MONTO_HORAS_EXTRAS` float DEFAULT NULL,
+  `BONOS` int(11) DEFAULT NULL,
+  `GRATIFICACIÓN` float DEFAULT NULL,
+  `BASE_IMPONIBLE` float DEFAULT NULL,
+  `NumCargasFam` int(11) DEFAULT NULL,
+  `MONTO_CARGAS_FAMILIARES` int(11) DEFAULT NULL,
+  `MOVILIZACIÓN` int(11) DEFAULT NULL,
+  `COLACIÓN` int(11) DEFAULT NULL,
+  `TOTAL_HABERES` float DEFAULT NULL,
+  `AFP` varchar(30) DEFAULT NULL,
+  `MONTO_AFP` float DEFAULT NULL,
+  `SALUD` varchar(30) DEFAULT NULL,
+  `ISAPRE_UF_TRABAJADOR` float DEFAULT NULL,
+  `MONTO_SALUD` float DEFAULT NULL,
+  `EXCEDENTE_SALUD` float DEFAULT NULL,
+  `SEGURO_CESANTIA` float DEFAULT NULL,
+  `SUELDO_LIQUIDO` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `1_2018historico`
+--
+
+INSERT INTO `1_2018historico` (`RUT`, `NOMBRE`, `DEPARTAMENTO`, `FECHA`, `SueldoBase`, `NUM_HORAS_EXTRAS`, `MONTO_HORAS_EXTRAS`, `BONOS`, `GRATIFICACIÓN`, `BASE_IMPONIBLE`, `NumCargasFam`, `MONTO_CARGAS_FAMILIARES`, `MOVILIZACIÓN`, `COLACIÓN`, `TOTAL_HABERES`, `AFP`, `MONTO_AFP`, `SALUD`, `ISAPRE_UF_TRABAJADOR`, `MONTO_SALUD`, `EXCEDENTE_SALUD`, `SEGURO_CESANTIA`, `SUELDO_LIQUIDO`) VALUES
+(15284785, 'VANESSA PEREZ', 'PRODUCCION', '27-1-2018', 1400000, 12, 130665, 40000, 109250, 1679920, 3, 0, 80000, 40000, 1799920, 'CAPITAL', 215869, 'FONASA', 0, 117594, 0, 10079, 1456370),
+(13836676, 'RODRIGO CASTRO', 'CONTABILIDAD', '27-1-2018', 1300000, 10, 101110, 0, 109250, 1510360, 5, 0, 80000, 40000, 1630360, 'PLANVITAL', 178525, 'ISAPRE COLMENA', 2, 105725, 50199, 9062, 1337050),
+(21846615, 'MAGDALENA CASTRO', 'VENTAS', '27-1-2018', 300000, 10, 23333, 50000, 75000, 448333, 1, 2151, 80000, 40000, 570484, 'CUPRUM', 57790, 'FONASA', 0, 31383, 0, 2690, 478621);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `12_2017historico`
+--
+
+CREATE TABLE IF NOT EXISTS `12_2017historico` (
+  `RUT` int(11) DEFAULT NULL,
+  `NOMBRE` varchar(30) DEFAULT NULL,
+  `DEPARTAMENTO` varchar(30) DEFAULT NULL,
+  `FECHA` varchar(30) DEFAULT NULL,
+  `SueldoBase` int(11) DEFAULT NULL,
+  `NUM_HORAS_EXTRAS` int(11) DEFAULT NULL,
+  `MONTO_HORAS_EXTRAS` float DEFAULT NULL,
+  `BONOS` int(11) DEFAULT NULL,
+  `GRATIFICACIÓN` float DEFAULT NULL,
+  `BASE_IMPONIBLE` float DEFAULT NULL,
+  `NumCargasFam` int(11) DEFAULT NULL,
+  `MONTO_CARGAS_FAMILIARES` int(11) DEFAULT NULL,
+  `MOVILIZACIÓN` int(11) DEFAULT NULL,
+  `COLACIÓN` int(11) DEFAULT NULL,
+  `TOTAL_HABERES` float DEFAULT NULL,
+  `AFP` varchar(30) DEFAULT NULL,
+  `MONTO_AFP` float DEFAULT NULL,
+  `SALUD` varchar(30) DEFAULT NULL,
+  `ISAPRE_UF_TRABAJADOR` float DEFAULT NULL,
+  `MONTO_SALUD` float DEFAULT NULL,
+  `EXCEDENTE_SALUD` float DEFAULT NULL,
+  `SEGURO_CESANTIA` float DEFAULT NULL,
+  `SUELDO_LIQUIDO` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `12_2017historico`
+--
+
+INSERT INTO `12_2017historico` (`RUT`, `NOMBRE`, `DEPARTAMENTO`, `FECHA`, `SueldoBase`, `NUM_HORAS_EXTRAS`, `MONTO_HORAS_EXTRAS`, `BONOS`, `GRATIFICACIÓN`, `BASE_IMPONIBLE`, `NumCargasFam`, `MONTO_CARGAS_FAMILIARES`, `MOVILIZACIÓN`, `COLACIÓN`, `TOTAL_HABERES`, `AFP`, `MONTO_AFP`, `SALUD`, `ISAPRE_UF_TRABAJADOR`, `MONTO_SALUD`, `EXCEDENTE_SALUD`, `SEGURO_CESANTIA`, `SUELDO_LIQUIDO`) VALUES
+(15284785, 'VANESSA PEREZ', 'PRODUCCION', '27-12-2017', 1400000, 10, 108888, 120000, 106875, 1735760, 3, 0, 80000, 40000, 1855760, 'CAPITAL', 223046, 'FONASA', 0, 121503, 0, 10415, 1500800),
+(13836676, 'RODRIGO CASTRO', 'CONTABILIDAD', '27-12-2017', 1300000, 11, 111221, 85000, 106875, 1603100, 5, 0, 80000, 40000, 1723100, 'PLANVITAL', 189486, 'ISAPRE COLMENA', 2, 112217, 58621, 9619, 1411770),
+(21846615, 'MAGDALENA CASTRO', 'VENTAS', '27-12-2017', 300000, 12, 28000, 130000, 75000, 533000, 1, 2151, 80000, 40000, 655151, '', 0, 'FONASA', 0, 37310, 0, 3198, 614643);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tabbono`
+--
+
+CREATE TABLE IF NOT EXISTS `tabbono` (
+  `RUT` int(11) NOT NULL,
+  `NOMBRE` varchar(30) NOT NULL,
+  `TIPO_DE_BONO` varchar(200) NOT NULL,
+  `MONTO_BONO` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tabbono`
+--
+
+INSERT INTO `tabbono` (`RUT`, `NOMBRE`, `TIPO_DE_BONO`, `MONTO_BONO`) VALUES
+(15284785, 'VANESSA PEREZ', ' Navidad Producción Producción', 160000),
+(13836676, 'RODRIGO CASTRO', ' Navidad Cumpleaños', 85000),
+(21846615, 'MAGDALENA CASTRO', ' Navidad Ventas Ventas', 180000);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tabcon`
+--
+
+CREATE TABLE IF NOT EXISTS `tabcon` (
+  `RUT` int(11) NOT NULL,
+  `NOMBRE` varchar(50) NOT NULL,
+  `DEPARTAMENTO` varchar(50) NOT NULL,
+  `FECHA` varchar(20) NOT NULL,
+  `SUELDO_LIQUIDO1` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tabcon`
+--
+
+INSERT INTO `tabcon` (`RUT`, `NOMBRE`, `DEPARTAMENTO`, `FECHA`, `SUELDO_LIQUIDO1`) VALUES
+(13836676, 'RODRIGO CASTRO', 'CONTABILIDAD', '27-1-2018', 1337048);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tabficha`
+--
+
+CREATE TABLE IF NOT EXISTS `tabficha` (
+  `RUT` int(11) NOT NULL,
+  `NOMBRE` varchar(50) NOT NULL,
+  `CARGO` varchar(30) NOT NULL,
+  `DEPARTAMENTO` varchar(30) NOT NULL,
+  `NumCargasFam` int(11) NOT NULL,
+  `SueldoBase` int(11) NOT NULL,
+  `AFP` varchar(30) NOT NULL,
+  `SALUD` varchar(30) NOT NULL,
+  `PLAN_ISAPRE_TRABAJADOR_UF` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tabficha`
+--
+
+INSERT INTO `tabficha` (`RUT`, `NOMBRE`, `CARGO`, `DEPARTAMENTO`, `NumCargasFam`, `SueldoBase`, `AFP`, `SALUD`, `PLAN_ISAPRE_TRABAJADOR_UF`) VALUES
+(15284785, 'VANESSA PEREZ', 'PROGRAMADORA', 'PRODUCCION', 3, 1400000, 'CAPITAL', 'FONASA', 0),
+(13836676, 'RODRIGO CASTRO', 'AUDITOR', 'CONTABILIDAD', 5, 1300000, 'PLANVITAL', 'ISAPRE COLMENA', 2),
+(21846615, 'MAGDALENA CASTRO', 'VENDEDORA', 'VENTAS', 1, 300000, '', 'FONASA', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tabpro`
+--
+
+CREATE TABLE IF NOT EXISTS `tabpro` (
+  `RUT` int(11) NOT NULL,
+  `NOMBRE` varchar(50) NOT NULL,
+  `DEPARTAMENTO` varchar(30) NOT NULL,
+  `FECHA` varchar(20) NOT NULL,
+  `SUELDO_LIQUIDO2` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tabpro`
+--
+
+INSERT INTO `tabpro` (`RUT`, `NOMBRE`, `DEPARTAMENTO`, `FECHA`, `SUELDO_LIQUIDO2`) VALUES
+(15284785, 'VANESSA PEREZ', 'PRODUCCION', '27-1-2018', 1456373);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tabrenta`
+--
+
+CREATE TABLE IF NOT EXISTS `tabrenta` (
+  `RUT` int(11) NOT NULL,
+  `NOMBRE` varchar(50) NOT NULL,
+  `DEPARTAMENTO` varchar(30) NOT NULL,
+  `SueldoBase` int(11) NOT NULL,
+  `NUEVO_SUELDO_BASE` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tabrenta`
+--
+
+INSERT INTO `tabrenta` (`RUT`, `NOMBRE`, `DEPARTAMENTO`, `SueldoBase`, `NUEVO_SUELDO_BASE`) VALUES
+(15284785, 'VANESSA PEREZ', 'PRODUCCION', 1400000, 0),
+(13836676, 'RODRIGO CASTRO', 'CONTABILIDAD', 1300000, 0),
+(21846615, 'MAGDALENA CASTRO', 'VENTAS', 300000, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tabsue`
+--
+
+CREATE TABLE IF NOT EXISTS `tabsue` (
+  `RUT` int(11) NOT NULL,
+  `NOMBRE` varchar(50) DEFAULT NULL,
+  `DEPARTAMENTO` varchar(30) NOT NULL,
+  `FECHA` varchar(20) NOT NULL,
+  `SueldoBase` int(11) NOT NULL,
+  `NUM_HORAS_EXTRAS` int(11) NOT NULL,
+  `MONTO_HORAS_EXTRAS` int(11) NOT NULL,
+  `BONOS` int(11) NOT NULL,
+  `GRATIFICACIÓN` int(11) NOT NULL,
+  `BASE_IMPONIBLE` int(11) NOT NULL,
+  `NumCargasFam` int(11) NOT NULL,
+  `MONTO_CARGAS_FAMILIARES` int(11) NOT NULL,
+  `MOVILIZACIÓN` int(11) NOT NULL,
+  `COLACIÓN` int(11) NOT NULL,
+  `TOTAL_HABERES` int(11) NOT NULL,
+  `AFP` varchar(20) NOT NULL,
+  `MONTO_AFP` int(11) NOT NULL,
+  `SALUD` varchar(20) NOT NULL,
+  `ISAPRE_UF_TRABAJADOR` int(11) NOT NULL,
+  `MONTO_SALUD` int(11) NOT NULL,
+  `EXCEDENTE_SALUD` int(11) NOT NULL,
+  `SEGURO_CESANTIA` int(11) NOT NULL,
+  `SUELDO_LIQUIDO` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tabsue`
+--
+
+INSERT INTO `tabsue` (`RUT`, `NOMBRE`, `DEPARTAMENTO`, `FECHA`, `SueldoBase`, `NUM_HORAS_EXTRAS`, `MONTO_HORAS_EXTRAS`, `BONOS`, `GRATIFICACIÓN`, `BASE_IMPONIBLE`, `NumCargasFam`, `MONTO_CARGAS_FAMILIARES`, `MOVILIZACIÓN`, `COLACIÓN`, `TOTAL_HABERES`, `AFP`, `MONTO_AFP`, `SALUD`, `ISAPRE_UF_TRABAJADOR`, `MONTO_SALUD`, `EXCEDENTE_SALUD`, `SEGURO_CESANTIA`, `SUELDO_LIQUIDO`) VALUES
+(15284785, 'VANESSA PEREZ', 'PRODUCCION', '27-1-2018', 1400000, 12, 130665, 40000, 109250, 1679915, 3, 0, 80000, 40000, 1799915, 'CAPITAL', 215869, 'FONASA', 0, 117594, 0, 10079, 1456373),
+(13836676, 'RODRIGO CASTRO', 'CONTABILIDAD', '27-1-2018', 1300000, 10, 101110, 0, 109250, 1510360, 5, 0, 80000, 40000, 1630360, 'PLANVITAL', 178525, 'ISAPRE COLMENA', 2, 105725, 50199, 9062, 1337048),
+(21846615, 'MAGDALENA CASTRO', 'VENTAS', '27-1-2018', 300000, 10, 23333, 50000, 75000, 448333, 1, 2151, 80000, 40000, 570484, 'CUPRUM', 57790, 'FONASA', 0, 31383, 0, 2690, 478621);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tabven`
+--
+
+CREATE TABLE IF NOT EXISTS `tabven` (
+  `RUT` int(11) NOT NULL,
+  `NOMBRE` varchar(50) NOT NULL,
+  `DEPARTAMENTO` varchar(30) NOT NULL,
+  `FECHA` varchar(20) NOT NULL,
+  `SUELDO_LIQUIDO3` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tabven`
+--
+
+INSERT INTO `tabven` (`RUT`, `NOMBRE`, `DEPARTAMENTO`, `FECHA`, `SUELDO_LIQUIDO3`) VALUES
+(21846615, 'MAGDALENA CASTRO', 'VENTAS', '27-1-2018', 478621);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

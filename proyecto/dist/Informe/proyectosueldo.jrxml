@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a2888175-f3d8-4a5c-9b02-be1c4e059100">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM TabSue]]>
+	</queryString>
+	<field name="NOMBRE" class="java.lang.String"/>
+	<field name="DEPARTAMENTO" class="java.lang.String"/>
+	<field name="FECHA" class="java.lang.String"/>
+	<field name="MONTO_HORAS_EXTRAS" class="java.math.BigDecimal"/>
+	<field name="SUELDO_LIQUIDO" class="java.math.BigDecimal"/>
+	<field name="RUT" class="java.lang.Integer"/>
+	<field name="NumCargasFam" class="java.lang.Integer"/>
+	<field name="MONTO_CARGAS_FAMILIARES" class="java.math.BigDecimal"/>
+	<field name="MONTO_AFP" class="java.math.BigDecimal"/>
+	<field name="SEGURO_CESANTIA" class="java.math.BigDecimal"/>
+	<field name="SueldoBase" class="java.math.BigDecimal"/>
+	<field name="NUM_HORAS_EXTRAS" class="java.lang.Integer"/>
+	<field name="AFP" class="java.lang.String"/>
+	<field name="SALUD" class="java.lang.String"/>
+	<field name="MONTO_SALUD" class="java.math.BigDecimal"/>
+	<field name="BONOS" class="java.math.BigDecimal"/>
+	<field name="GRATIFICACIÓN" class="java.math.BigDecimal"/>
+	<field name="BASE_IMPONIBLE" class="java.math.BigDecimal"/>
+	<field name="EXCEDENTE_SALUD" class="java.math.BigDecimal"/>
+	<field name="TOTAL_HABERES" class="java.math.BigDecimal"/>
+	<field name="MOVILIZACIÓN" class="java.math.BigDecimal"/>
+	<field name="COLACIÓN" class="java.math.BigDecimal"/>
+	<field name="ISAPRE_UF_TRABAJADOR" class="java.lang.Integer"/>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="171" y="12" width="175" height="37" uuid="dbcc5a6d-65d9-457b-8014-47ce626838b5"/>
+				<textElement>
+					<font size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUELDO LIQUIDO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="0" width="41" height="20" uuid="732a4fa5-eea9-475e-a0fb-135d020dfdad"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[RUT:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="2" width="100" height="20" uuid="46ffda35-7e9b-453a-9a43-de1cb0af46ea"/>
+				<textFieldExpression><![CDATA[$F{RUT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="101" y="22" width="100" height="20" uuid="8e3dc4b6-a5f2-4def-a811-243b301dd38f"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="22" width="59" height="20" uuid="9f37bafa-ef34-4439-9715-e6d42f3873dc"/>
+				<text><![CDATA[NOMBRE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="2" width="54" height="20" uuid="1dacdf95-b6c0-410e-b94c-3c4e2f496fe9"/>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="324" y="2" width="100" height="20" uuid="86146c8d-67fb-4c0b-95a3-743db4b79261"/>
+				<textFieldExpression><![CDATA[$F{FECHA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="489" splitType="Stretch">
+			<textField>
+				<reportElement x="201" y="18" width="123" height="20" uuid="2c1e94c2-d83a-4aa5-a2f1-593928270195"/>
+				<textFieldExpression><![CDATA[$F{SUELDO_LIQUIDO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="18" width="100" height="20" uuid="64b0faa5-29c3-4637-ae0c-e3122ec5dd45"/>
+				<text><![CDATA[SUELDO LIQUIDO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="349" y="38" width="134" height="20" uuid="dc47fed8-4626-4aad-ab46-3d6601aba816"/>
+				<textFieldExpression><![CDATA[$F{NUM_HORAS_EXTRAS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="38" width="134" height="20" uuid="50d7df0d-97af-4cb0-b9e2-f2de7a361d70"/>
+				<textFieldExpression><![CDATA[$F{NUM_HORAS_EXTRAS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="38" width="170" height="20" uuid="b26f5031-8d43-4a02-aa45-e0bae5d545d5"/>
+				<text><![CDATA[NUMERO DE HORAS EXTRAS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="201" y="58" width="100" height="20" uuid="514ecf82-52f3-4e40-b860-e63cffcf540e"/>
+				<textFieldExpression><![CDATA[$F{BONOS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="58" width="100" height="20" uuid="f81334b5-b45f-4bf2-9e21-f39f8d2746cd"/>
+				<text><![CDATA[BONOS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="201" y="78" width="100" height="20" uuid="89020fb6-e09a-4df7-a925-372f676b4e74"/>
+				<textFieldExpression><![CDATA[$F{GRATIFICACIÓN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="78" width="100" height="20" uuid="816d6e14-962a-4a7c-9eb3-5e54219ce9f2"/>
+				<text><![CDATA[GRATIFICACIÓN:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="201" y="128" width="134" height="20" uuid="1ad05047-4cc6-4d21-97b9-5f67a21a250f"/>
+				<textFieldExpression><![CDATA[$F{BASE_IMPONIBLE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="128" width="100" height="20" uuid="2ec42475-a2ae-43ab-ae0b-088908221807"/>
+				<text><![CDATA[BASE IMPONIBLE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="201" y="177" width="100" height="20" uuid="fa931703-241c-4bbc-96ea-3753772ca3a0"/>
+				<textFieldExpression><![CDATA[$F{NumCargasFam}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="177" width="143" height="20" uuid="2ddffd25-cbbf-4a54-b237-bf9ecd58d80a"/>
+				<text><![CDATA[CARGAS FAMILIARES:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="311" y="177" width="187" height="20" uuid="f6a7f54a-bbe2-4ded-82b9-8cd0238d4857"/>
+				<textFieldExpression><![CDATA[$F{MONTO_CARGAS_FAMILIARES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="197" width="100" height="20" uuid="9381741b-1e94-48a1-b372-6cbd13a87f02"/>
+				<textFieldExpression><![CDATA[$F{MOVILIZACIÓN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="197" width="100" height="20" uuid="90d57b68-c3ef-475f-8947-aabf06c537d3"/>
+				<text><![CDATA[MOVILIZACIÓN:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="201" y="217" width="100" height="20" uuid="a7898e99-0882-4724-b9c4-a35d481f3813"/>
+				<textFieldExpression><![CDATA[$F{COLACIÓN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="217" width="100" height="20" uuid="6fb0881d-c20d-49e9-bc50-a272e8c4b2b4"/>
+				<text><![CDATA[COLACIÓN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="201" y="261" width="134" height="20" uuid="7fd33d96-23e5-433c-a103-80db2474794c"/>
+				<textFieldExpression><![CDATA[$F{TOTAL_HABERES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="261" width="100" height="20" uuid="429b1a78-666a-4c28-bbf2-aac5a5ff9dbe"/>
+				<text><![CDATA[TOTAL HABERES:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="116" width="555" height="2" uuid="21f0ee9c-36ce-4d3c-a089-d52d229e3dd3"/>
+			</line>
+			<line>
+				<reportElement x="1" y="148" width="555" height="1" uuid="6faf131f-b7c6-45c9-874d-e3a480b69e93"/>
+			</line>
+			<line>
+				<reportElement x="2" y="249" width="554" height="1" uuid="31ace8cb-64c4-43d4-9c97-2481e73ac9d2"/>
+			</line>
+			<line>
+				<reportElement x="2" y="281" width="555" height="1" uuid="ccf66e56-96b4-498b-a265-c0f262329627"/>
+			</line>
+			<textField>
+				<reportElement x="71" y="293" width="100" height="20" uuid="552b1757-c668-41db-927d-5263e2919d2e"/>
+				<textFieldExpression><![CDATA[$F{AFP}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="293" width="39" height="20" uuid="6ab0aadb-5110-4888-a279-39717be3b652"/>
+				<text><![CDATA[AFP:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="171" y="293" width="100" height="20" uuid="0b0935b3-4783-434a-aa46-b93b904bdd24"/>
+				<textFieldExpression><![CDATA[$F{MONTO_AFP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="313" width="100" height="20" uuid="6fdfaf6d-0d60-4ab2-9fdf-12c8691bb486"/>
+				<textFieldExpression><![CDATA[$F{SALUD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="313" width="39" height="20" uuid="b66e126c-c91d-459d-af2e-158a8710317e"/>
+				<text><![CDATA[SALUD:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="171" y="313" width="100" height="20" uuid="86253952-b984-49f3-915e-c5caa5a69b06"/>
+				<textFieldExpression><![CDATA[$F{MONTO_SALUD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="313" width="100" height="20" uuid="a2aeabb1-43b8-4bfd-9ba3-fc1c1adcbfa0"/>
+				<textFieldExpression><![CDATA[$F{EXCEDENTE_SALUD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="291" y="313" width="144" height="20" uuid="0352bc3a-f20d-45c6-8e49-c76a41cdcc6d"/>
+				<text><![CDATA[EXCEDENTE SALUD ISAPRE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="187" y="364" width="162" height="20" uuid="a7c51d15-aa9f-4b5f-8ecf-fbbe10c02ecd"/>
+				<textFieldExpression><![CDATA[$F{SUELDO_LIQUIDO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="355" width="555" height="1" uuid="9ef11a5d-11d7-4ffc-b188-4b66799456af"/>
+			</line>
+			<line>
+				<reportElement x="2" y="384" width="553" height="1" uuid="0ca8e58f-3988-46eb-8fd1-ba3db6538522"/>
+			</line>
+			<staticText>
+				<reportElement x="349" y="456" width="186" height="20" uuid="b07c118e-8a5e-4e1b-a1a2-6fde700069eb"/>
+				<text><![CDATA[FIRMA DEL TRABAJADOR]]></text>
+			</staticText>
+			<line>
+				<reportElement x="300" y="453" width="220" height="1" uuid="64364332-13b1-4601-900b-f20bd364f762"/>
+			</line>
+			<staticText>
+				<reportElement x="17" y="364" width="130" height="20" uuid="41ecb2d5-6c19-4d90-83f5-97241de93e69"/>
+				<text><![CDATA[SUELDO LIQUIDO:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
